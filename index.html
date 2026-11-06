@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUARA SISWA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo">
+      <h2>SUARA SISWA</h2>
+    </div>
+    <button id="menuBtn">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#cara">Cara Kerja</a>
+      <a href="#form">Kirim Laporan</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="label">SUARA KITA, PERUBAHAN BERSAMA</span>
+    <h1>Sampaikan Suaramu,<br>
+      <span>Wujudkan Perubahan.</span>
+    </h1>
+    <p>
+      Website pengaduan dan aspirasi siswa untuk
+      menciptakan lingkungan sekolah yang aman,
+      nyaman, dan lebih baik.
+    </p>
+    <a href="#form" class="btn">Kirim Aspirasi →</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/logo.png" alt="Logo Suara Siswa">
+  </div>
+</section>
+
+<section class="about" id="tentang">
+  <h2>Tentang SUARA SISWA</h2>
+  <p>
+    SUARA SISWA merupakan platform digital yang
+    memberikan kesempatan kepada siswa untuk
+    menyampaikan pengaduan, kritik, saran, dan ide
+    kepada pihak sekolah.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>📢 Pengaduan</h3>
+      <p>Laporkan masalah yang terjadi di lingkungan sekolah.</p>
+    </div>
+    <div class="card">
+      <h3>💡 Aspirasi</h3>
+      <p>Sampaikan ide, kritik, dan saran yang membangun.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Privasi</h3>
+      <p>Identitas siswa dapat dirahasiakan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="cara">
+  <h2>Cara Menggunakan Website</h2>
+  <div class="step-list">
+    <div><b>01</b><h3>Pilih Kategori</h3><p>Pilih pengaduan atau aspirasi.</p></div>
+    <div><b>02</b><h3>Isi Formulir</h3><p>Masukkan judul dan isi laporan.</p></div>
+    <div><b>03</b><h3>Kirim Laporan</h3><p>Kirim dan simpan kode laporan.</p></div>
+  </div>
+</section>
+
+<section class="form-section" id="form">
+  <div class="form-container">
+    <div class="form-info">
+      <h2>Suaramu <span>Berarti!</span></h2>
+      <p>
+        Jangan ragu untuk menyampaikan pendapat.
+        Setiap suara memiliki arti untuk kemajuan sekolah.
+      </p>
+    </div>
+
+    <form id="reportForm">
+      <h2>Form Pengaduan & Aspirasi</h2>
+
+      <label>Jenis Laporan *</label>
+      <select id="jenis" required>
+        <option value="">Pilih jenis laporan</option>
+        <option>Pengaduan</option>
+        <option>Aspirasi</option>
+      </select>
+
+      <label>Kategori *</label>
+      <select id="kategori" required>
+        <option value="">Pilih kategori</option>
+        <option>Fasilitas Sekolah</option>
+        <option>Kebersihan</option>
+        <option>Pembelajaran</option>
+        <option>Kedisiplinan</option>
+        <option>Keamanan dan Perundungan</option>
+        <option>Kegiatan Siswa</option>
+        <option>Lainnya</option>
+      </select>
+
+      <label>Judul Laporan *</label>
+      <input type="text" id="judul" maxlength="100"
+        placeholder="Masukkan judul laporan" required>
+
+      <label>Isi Laporan *</label>
+      <textarea id="isi" minlength="15" maxlength="2000"
+        placeholder="Tuliskan pengaduan atau aspirasi kamu..."
+        required></textarea>
+
+      <p class="counter" id="counter">0/2000 karakter</p>
+
+      <label class="check">
+        <input type="checkbox" id="anonim" checked>
+        Kirim secara anonim
+      </label>
+
+      <div id="identitas" class="hidden">
+        <label>Nama Siswa</label>
+        <input type="text" id="nama" placeholder="Nama siswa">
+        <label>Kelas</label>
+        <input type="text" id="kelas" placeholder="Contoh: XI RPL 1">
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="setuju" required>
+        Saya mengirim laporan dengan jujur dan sopan.
+      </label>
+
+      <button type="submit" id="submitBtn">Kirim Laporan →</button>
+
+      <div id="hasil" class="result hidden"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h3>SUARA SISWA</h3>
+  <p>Suara kita untuk sekolah yang lebih baik.</p>
+  <p>© 2026 SUARA SISWA | Project Website Kelompok</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
